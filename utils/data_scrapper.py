@@ -8,7 +8,7 @@ import re
 root = 'https://nicepage.com'
 link1 = []
 
-for i in range(6, 41):
+for i in range(1, 41):
     url = 'https://nicepage.com/html-templates?page={}'.format(i)
     reqs = requests.get(url)
     soup = BeautifulSoup(reqs.text, 'lxml')
