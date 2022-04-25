@@ -51,7 +51,8 @@ class DOMBuilder:
         # nx.draw(G, nx.planar_layout(G), node_size=20)
         # plt.savefig("vis.png")
         return G
-
+    
+    """Given list of website url, outputs list of corresponding DOM tree structures in networkx graph format"""
     def graph_loader(self, url_list):
         # sample
         # url_list = ["https://website1649510.nicepage.io/Contact.html?version=3e4b754f-560c-4f11-a59a-f4eccf6f5e53"]
