@@ -41,8 +41,9 @@ def scrapper():
     return final
 
 
-scrapper()
-# dict = {'LINKS': final}
-#
-# df = pd.DataFrame(dict)
-# df.to_csv('dataset.csv')
+if __name__ == "__main__":
+    scrapper()
+    # dict = {'LINKS': final}
+    #
+    # df = pd.DataFrame(dict)
+    # df.to_csv('dataset.csv')
