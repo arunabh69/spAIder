@@ -40,7 +40,7 @@ def graph_builder(url):
     # get soup
     soup = BeautifulSoup(response.content, "lxml")
 
-    """Removes tags other than 'body' tag in html dom tree"""
+    """Removes subtree other than 'body' subtree in HTML DOM tree"""
     # remove garbage
     soup = soup.html
     for i in soup.children:
