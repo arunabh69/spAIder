@@ -2,6 +2,7 @@ import requests
 from bs4 import BeautifulSoup
 import re
 
+
 def scrapper():
     root = 'https://nicepage.com'
     link1 = []
@@ -13,13 +14,10 @@ def scrapper():
 
         for link in soup.findAll('a', class_="thumbnail"):
             x = link.get('style')
-
             y = re.findall('[0-9]+', x)
             ans = int(y[1])
-            print(ans)
             if ans <= 200:
                 link1.append(link.get('href'))
-            print(link1)
 
     link2 = []
     for links in link1:
@@ -29,8 +27,6 @@ def scrapper():
         box = soup.find('a', class_="demo-link")
         link2.append(box.get('href'))
 
-    print(link2)
-
     final = []
     for links in link2:
         req = requests.get(f'{root}{links}')
@@ -39,10 +35,6 @@ def scrapper():
         box = soup.find('iframe')
         final.append(box.get('src'))
     return final
-
-
-if __name__ == "__main__":
-    scrapper()
     # dict = {'LINKS': final}
     #
     # df = pd.DataFrame(dict)
