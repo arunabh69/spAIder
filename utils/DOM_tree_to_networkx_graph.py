@@ -52,9 +52,9 @@ class DOMBuilder:
         # plt.savefig("vis.png")
         return G
 
-    def graph_loader(self):
+    def graph_loader(self, url_list):
         # sample
-        url_list = ["https://website1649510.nicepage.io/Contact.html?version=3e4b754f-560c-4f11-a59a-f4eccf6f5e53"]
+        # url_list = ["https://website1649510.nicepage.io/Contact.html?version=3e4b754f-560c-4f11-a59a-f4eccf6f5e53"]
         graph_list = []
         for i in url_list:
             graph_list.append(self.graph_builder(i))
