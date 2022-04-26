@@ -47,6 +47,7 @@ class DOMBuilder:
 
         node_dict = {}
         self.traverse_html(soup, G)
+        self._dfs_counter = 0
         # draw graph from networkx library
         # nx.draw(G, nx.planar_layout(G), node_size=20)
         # plt.savefig("vis.png")
